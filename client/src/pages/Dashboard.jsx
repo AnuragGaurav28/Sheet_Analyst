@@ -83,24 +83,37 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="hidden md:block">
-                <svg viewBox="0 0 200 100" className="w-24 h-12">
-                  <path
-                    d="M 20 100 A 80 80 0 0 1 180 100"
-                    fill="none"
-                    stroke="#e5e7eb"
-                    strokeWidth="25"
+                <svg viewBox="0 0 120 120" className="w-24 h-24">
+                 <circle
+                   cx="60"
+                   cy="60"
+                   r="50"
+                   fill="none"
+                   stroke="#e5e7eb"
+                   strokeWidth="12"
                   />
-                  <path
-                    d="M 20 100 A 80 80 0 0 1 180 100"
-                    fill="none"
-                    stroke="#22c55e"
-                    strokeWidth="25"
-                    strokeDasharray="251.33"
-                    strokeDashoffset={`${251.33 - Math.min(uploadCount, 30) * (251.33 / 30)}`}
-                    strokeLinecap="round"
+                 <circle
+                   cx="60"
+                   cy="60"
+                   r="50"
+                   fill="none"
+                   stroke="#22c55e"
+                   strokeWidth="12"
+                   strokeDasharray="314"
+                   strokeDashoffset={`${314 - Math.min(uploadCount, 30) * (314 / 30)}`}
+                   strokeLinecap="round"
+                   transform="rotate(-90 60 60)"
                   />
-               </svg>
-               
+                 <text
+                   x="50%"
+                   y="50%"
+                   textAnchor="middle"
+                   dominantBaseline="central"
+                   className="text-2xl fill-green-800 font-semibold"
+                  >
+                   {Math.min(Math.round((uploadCount / 30) * 100), 100)}%
+                  </text>
+               </svg>  
               </div>
             </div>
             {/* Recent Uploads */}
