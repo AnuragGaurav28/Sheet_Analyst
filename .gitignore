@@ -1,0 +1,19 @@
+# Ignore system files
+.DS_Store
+structure.txt
+
+# Ignore Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore build files (optional)
+client/build/
+client/dist/
+
+# Ignore environment variables
+.env
+server/.env
+
+# Ignore uploaded files
+server/uploads/
